@@ -12,20 +12,21 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var loginButton: UIButton!
     @IBOutlet var forgotUserNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
 
     @IBAction func loginButtonPushed() {
         if userNameTF.text == "User" && passwordTF.text == "Password" { print(1)
         } else {
-            showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
+            showAlert(
+                with: "Invalid login or password",
+                and: "Please, enter correct login and password"
+            )
         }
     }
     
@@ -45,10 +46,29 @@ class ViewController: UIViewController {
 }
 extension ViewController {
     private func showAlert(with title: String, and text: String) {
-        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let alert = UIAlertController(
+            title: title,
+            message: text,
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: alertHandler
+        )
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func alertHandler(alert: UIAlertAction!) {
+        passwordTF.text = ""
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first as? UITouch {
+            if touch.view == self.view{
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.view.endEditing(true)
+        }
     }
 }
 

@@ -23,6 +23,8 @@ class GreetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(userName ?? "")"
+        
+        
     }
     
 //    override func viewDidLayoutSubviews() {
@@ -35,6 +37,5 @@ class GreetingViewController: UIViewController {
     
     @IBAction func logoutButtonPressed() {
         dismiss(animated: true)
-        
     }
 }
