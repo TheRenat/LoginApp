@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
 
 
@@ -28,7 +27,6 @@ class ViewController: UIViewController {
         } else {
             showAlert(with: "Invalid login or password", and: "Please, enter correct login and password")
         }
-        passwordTF.text = ""
     }
     
     @IBAction func forgotUserNameButtonPushed() {
@@ -38,6 +36,12 @@ class ViewController: UIViewController {
     @IBAction func forgotPasswordButtonPushed() {
         showAlert(with: "Oops!", and: "Your password is Password 😉")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        greetingVC.userName = userNameTF.text
+    }
+    
 }
 extension ViewController {
     private func showAlert(with title: String, and text: String) {
@@ -47,3 +51,5 @@ extension ViewController {
         present(alert, animated: true)
     }
 }
+
+
