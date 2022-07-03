@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
@@ -18,10 +18,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
+    
     @IBAction func loginButtonPushed() {
-        if userNameTF.text == "User" && passwordTF.text == "Password" { print(1)
+        if userNameTF.text == "Renat" && passwordTF.text == "Password" {
         } else {
             showAlert(
                 with: "Invalid login or password",
@@ -31,7 +30,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonPushed() {
-        showAlert(with: "Oops!", and: "Your name is User 😉")
+        showAlert(with: "Oops!", and: "Your name is Renat 😉")
         
     }
     @IBAction func forgotPasswordButtonPushed() {
@@ -44,9 +43,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard  let greetingVC = segue.source as? WelcomeViewController else { return }
+        guard  let _ = segue.source as? WelcomeViewController else { return }
         userNameTF.text = ""
         passwordTF.text = ""
+    }
+    
+    private func alertHandler(alert: UIAlertAction!) {
+        passwordTF.text = ""
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            if touch.view == self.view{
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.view.endEditing(true)
+        }
     }
     
 }
@@ -63,18 +74,6 @@ extension LoginViewController {
         )
         alert.addAction(okAction)
         present(alert, animated: true)
-    }
-    
-    private func alertHandler(alert: UIAlertAction!) {
-        passwordTF.text = ""
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            if touch.view == self.view{
-                self.dismiss(animated: true, completion: nil)
-            }
-            self.view.endEditing(true)
-        }
     }
 }
 

@@ -7,26 +7,23 @@
 
 import UIKit
 
-@IBDesignable
 class WelcomeViewController: UIViewController {
-
+    
     @IBOutlet var backgroundView: UIView!
     
     @IBOutlet var welcomeLabel: UILabel!
     
     var userName: String!
-    @IBInspectable var firstColor: UIColor = .clear
-    @IBInspectable var secondColor: UIColor = .clear
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(userName ?? "")"
+        welcomeLabel.text = "Welcome, \(userName ?? "")!"
         
-//        let newLayer = CAGradientLayer()
-//        newLayer.colors = [UIColor.blue.cgColor, UIColor.green.cgColor]
-//        newLayer.frame = view.bounds
-//        
-//        view.layer.insertSublayer(newLayer, at: 0)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.systemMint.cgColor, UIColor.white.cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
     }
     
     @IBAction func logoutButtonPressed() {
