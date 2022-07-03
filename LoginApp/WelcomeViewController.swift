@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class GreetingViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     
 //    @IBInspectable var topColor: UIColor = .red
@@ -33,6 +33,7 @@ class GreetingViewController: UIViewController {
 //        gradientLayer.colors = [topColor.cgColor, buttomColor.cgColor]
 //        backgroundView.layer.addSublayer(gradientLayer)
 //    }
+    
     
     
     @IBAction func logoutButtonPressed() {

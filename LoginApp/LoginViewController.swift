@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -39,12 +39,18 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
         greetingVC.userName = userNameTF.text
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard  let greetingVC = segue.source as? WelcomeViewController else { return }
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
 }
-extension ViewController {
+extension LoginViewController {
     private func showAlert(with title: String, and text: String) {
         let alert = UIAlertController(
             title: title,
@@ -63,7 +69,7 @@ extension ViewController {
         passwordTF.text = ""
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first {
             if touch.view == self.view{
                 self.dismiss(animated: true, completion: nil)
             }
