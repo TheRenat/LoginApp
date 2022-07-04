@@ -9,8 +9,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet var backgroundView: UIView!
-    
     @IBOutlet var welcomeLabel: UILabel!
     
     var userName: String!
@@ -24,9 +22,5 @@ class WelcomeViewController: UIViewController {
         gradientLayer.colors = [UIColor.systemMint.cgColor, UIColor.white.cgColor]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-    }
-    
-    @IBAction func logoutButtonPressed() {
-        dismiss(animated: true)
     }
 }

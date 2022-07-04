@@ -109,13 +109,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="7qG-uK-OuC"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="28"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logoutButtonPressed" destination="zeO-IF-6kP" eventType="touchUpInside" id="ZF5-Jf-QM8"/>
-                                    <segue destination="ZcL-0X-DK4" kind="unwind" unwindAction="unwindFor:" id="3Sn-Ff-ac9"/>
+                                    <segue destination="ZcL-0X-DK4" kind="unwind" unwindAction="unwindSegueFor:" id="DWj-TY-qXE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egX-uM-xQL">
@@ -152,7 +152,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="backgroundView" destination="7cB-Kv-aWS" id="AjE-JP-GNz"/>
                         <outlet property="welcomeLabel" destination="egX-uM-xQL" id="HdZ-58-lI1"/>
                     </connections>
                 </viewController>
