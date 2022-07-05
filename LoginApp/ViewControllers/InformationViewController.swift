@@ -12,15 +12,19 @@ class InformationViewController: UIViewController {
     @IBOutlet var personImage: UIImageView!
     
     @IBOutlet var personInfo: UILabel!
-    //var person: Person!
+    
+    var personName = ""
+    var personInformation = ""
+    var personPhoto = ""
         
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        personImage.layer.name = personImage
-        
-        
+        navigationItem.title = personName
+        personInfo.text = personInformation
+        personImage.image = UIImage(named: "selfPhoto")
+    }
+    override func viewDidLayoutSubviews() {
+        personImage.layer.cornerRadius = personImage.frame.width / 2
     }
 }

@@ -22,7 +22,9 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = user.person.name
             } else if let informationVC = viewController as? InformationViewController {
-                informationVC.person = user.person
+                informationVC.personName = user.person.name
+                informationVC.personInformation = user.person.infoAboutPerson
+                informationVC.personPhoto = user.person.image
             }
         }
     }
