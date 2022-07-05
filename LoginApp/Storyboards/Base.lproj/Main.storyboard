@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -96,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="-105" y="80"/>
         </scene>
-        <!--Item-->
+        <!--Hello!-->
         <scene sceneID="FgQ-xd-kC0">
             <objects>
                 <viewController id="zeO-IF-6kP" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -118,14 +119,14 @@
                                     <segue destination="ZcL-0X-DK4" kind="unwind" unwindAction="unwindSegueFor:" id="DWj-TY-qXE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egX-uM-xQL">
-                                <rect key="frame" x="80" y="122" width="160" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egX-uM-xQL">
+                                <rect key="frame" x="16" y="100" width="288" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIj-aJ-iW8">
-                                <rect key="frame" x="117" y="206" width="86" height="96"/>
+                                <rect key="frame" x="117" y="212" width="86" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,13 +137,16 @@
                         <constraints>
                             <constraint firstItem="Yco-b8-Unv" firstAttribute="centerX" secondItem="Njo-OH-mbd" secondAttribute="centerX" id="EFo-s1-q7R"/>
                             <constraint firstItem="Njo-OH-mbd" firstAttribute="bottom" secondItem="Yco-b8-Unv" secondAttribute="bottom" constant="46" id="Iba-dQ-m2f"/>
-                            <constraint firstItem="egX-uM-xQL" firstAttribute="top" secondItem="Njo-OH-mbd" secondAttribute="top" constant="122" id="JBG-WY-3o3"/>
-                            <constraint firstItem="egX-uM-xQL" firstAttribute="centerX" secondItem="Njo-OH-mbd" secondAttribute="centerX" id="VX4-TK-BJb"/>
-                            <constraint firstItem="JIj-aJ-iW8" firstAttribute="top" secondItem="egX-uM-xQL" secondAttribute="bottom" constant="36" id="XAa-1c-5CP"/>
+                            <constraint firstItem="egX-uM-xQL" firstAttribute="leading" secondItem="Njo-OH-mbd" secondAttribute="leading" constant="16" id="ZMV-Lk-dKE"/>
                             <constraint firstItem="JIj-aJ-iW8" firstAttribute="centerX" secondItem="Njo-OH-mbd" secondAttribute="centerX" id="kSa-PA-saP"/>
+                            <constraint firstItem="egX-uM-xQL" firstAttribute="top" secondItem="Njo-OH-mbd" secondAttribute="top" constant="100" id="l3r-qd-7db"/>
+                            <constraint firstItem="Njo-OH-mbd" firstAttribute="trailing" secondItem="egX-uM-xQL" secondAttribute="trailing" constant="16" id="mki-Ga-mHh"/>
+                            <constraint firstItem="JIj-aJ-iW8" firstAttribute="centerY" secondItem="Njo-OH-mbd" secondAttribute="centerY" id="t0R-7M-pPY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dqY-4A-vbE"/>
+                    <tabBarItem key="tabBarItem" title="Hello!" id="dqY-4A-vbE">
+                        <imageReference key="image" image="hand.wave" catalog="system" symbolScale="medium" renderingMode="template"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="inU-3F-j7F"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="topColor">
@@ -167,6 +171,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vyv-db-10o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hCC-16-M8T">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -182,7 +187,7 @@
         <!--Info-->
         <scene sceneID="Agn-Hh-sJp">
             <objects>
-                <viewController id="fmh-bU-GX8" sceneMemberID="viewController">
+                <viewController id="fmh-bU-GX8" customClass="InformationViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vFp-y9-wKs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,11 +223,13 @@
             </objects>
             <point key="canvasLocation" x="3152" y="-600"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="frX-5Q-dSY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0tb-FS-vWv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Y89-vZ-nRq"/>
+                    <tabBarItem key="tabBarItem" title="About" selectedImage="person" catalog="system" id="Y89-vZ-nRq">
+                        <imageReference key="image" image="person" catalog="system" symbolScale="medium" renderingMode="template"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ncq-pP-7Sg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -235,10 +242,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5y-v6-BYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515" y="-599"/>
+            <point key="canvasLocation" x="1541" y="-600"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hand.wave" catalog="system" width="128" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

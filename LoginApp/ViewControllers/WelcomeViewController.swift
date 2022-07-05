@@ -13,6 +13,17 @@ class WelcomeViewController: UIViewController {
     
     var userName: String!
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+//        guard let viewControllers = tabBarVC.viewControllers else { return }
+//        
+//        viewControllers.forEach { viewController in
+//            if let welcomeVC = viewController as? WelcomeViewController {
+//                welcomeVC.userName = user.name
+//            }
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(userName ?? "")!"

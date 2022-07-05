@@ -12,15 +12,21 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "Renat"
-    private let password = "Password"
-    
-    //
+    private let user = User.getUser()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-        greetingVC.userName = user
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user.name
+            }
+        }
     }
+//        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
+//        greetingVC.userName = user.name
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -28,7 +34,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPushed() {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password",
