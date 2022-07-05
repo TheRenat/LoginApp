@@ -184,17 +184,38 @@
             </objects>
             <point key="canvasLocation" x="712.5" y="81.338028169014081"/>
         </scene>
-        <!--Info-->
+        <!--Information View Controller-->
         <scene sceneID="Agn-Hh-sJp">
             <objects>
                 <viewController id="fmh-bU-GX8" customClass="InformationViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vFp-y9-wKs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTA-wD-rYO">
+                                <rect key="frame" x="139" y="257" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-za-DsZ">
+                                <rect key="frame" x="91" y="97" width="138" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="z0a-Vv-Nms"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zBz-KD-qW4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UY4-za-DsZ" firstAttribute="width" secondItem="vFp-y9-wKs" secondAttribute="height" multiplier="69:284" id="AUx-Qt-Kj4"/>
+                            <constraint firstItem="UY4-za-DsZ" firstAttribute="centerX" secondItem="jTA-wD-rYO" secondAttribute="centerX" id="BdD-Pb-iMH"/>
+                            <constraint firstItem="jTA-wD-rYO" firstAttribute="top" secondItem="UY4-za-DsZ" secondAttribute="bottom" constant="20" id="FOi-cb-Xfb"/>
+                            <constraint firstItem="UY4-za-DsZ" firstAttribute="top" secondItem="zBz-KD-qW4" secondAttribute="top" constant="53" id="aUQ-09-i6b"/>
+                            <constraint firstItem="UY4-za-DsZ" firstAttribute="centerX" secondItem="zBz-KD-qW4" secondAttribute="centerX" id="mbU-G1-j9t"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Info" id="qJ5-3X-QGn">
+                    <navigationItem key="navigationItem" id="qJ5-3X-QGn">
                         <barButtonItem key="backBarButtonItem" title="back" id="yf9-KQ-NcT"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="yfz-7y-HEJ">
                             <connections>
@@ -202,6 +223,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="personImage" destination="UY4-za-DsZ" id="i31-xM-W7f"/>
+                        <outlet property="personInfo" destination="jTA-wD-rYO" id="lCv-NA-R39"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARv-WJ-lad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

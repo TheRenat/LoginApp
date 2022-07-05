@@ -9,22 +9,18 @@ import UIKit
 
 class InformationViewController: UIViewController {
     
+    @IBOutlet var personImage: UIImageView!
+    
+    @IBOutlet var personInfo: UILabel!
+    //var person: Person!
+        
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        personImage.layer.name = personImage
         
-        //navigationItem.title =
         
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let tabBarVC = segue.destination as? UITabBarController else { return }
-//        guard let viewControllers = tabBarVC.viewControllers else { return }
-//        
-//        viewControllers.forEach { viewController in
-//            if let welcomeVC = viewController as? WelcomeViewController {
-//                welcomeVC.userName = user.name
-//            }
-//        }
-//    }
 }

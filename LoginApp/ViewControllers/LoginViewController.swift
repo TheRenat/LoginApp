@@ -20,13 +20,12 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.name
+                welcomeVC.userName = user.person.name
+            } else if let informationVC = viewController as? InformationViewController {
+                informationVC.person = user.person
             }
         }
     }
-//        guard let greetingVC = segue.destination as? WelcomeViewController else { return }
-//        greetingVC.userName = user.name
-//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

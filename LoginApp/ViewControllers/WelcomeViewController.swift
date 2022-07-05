@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
-    var userName: String!
+    var userName = ""
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        guard let tabBarVC = segue.destination as? UITabBarController else { return }
@@ -26,7 +26,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(userName ?? "")!"
+        welcomeLabel.text = "Welcome, \(userName)!"
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds

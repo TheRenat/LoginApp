@@ -14,8 +14,9 @@
 		9406F968286E371B00976A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9406F967286E371B00976A7B /* Assets.xcassets */; };
 		9406F96B286E371B00976A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406F969286E371B00976A7B /* LaunchScreen.storyboard */; };
 		9406F9732871B4CE00976A7B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406F9722871B4CE00976A7B /* WelcomeViewController.swift */; };
-		94B66020287490A400218E95 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6601F287490A400218E95 /* File.swift */; };
+		94B66020287490A400218E95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6601F287490A400218E95 /* User.swift */; };
 		94B6602228749BF300218E95 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6602128749BF300218E95 /* InformationViewController.swift */; };
+		94B660242874C8A500218E95 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B660232874C8A500218E95 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		9406F96A286E371B00976A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9406F96C286E371B00976A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9406F9722871B4CE00976A7B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		94B6601F287490A400218E95 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		94B6601F287490A400218E95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94B6602128749BF300218E95 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		94B660232874C8A500218E95 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +113,8 @@
 		94B6601E2874908B00218E95 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				94B6601F287490A400218E95 /* File.swift */,
+				94B6601F287490A400218E95 /* User.swift */,
+				94B660232874C8A500218E95 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,10 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B66020287490A400218E95 /* File.swift in Sources */,
+				94B66020287490A400218E95 /* User.swift in Sources */,
 				9406F963286E371900976A7B /* LoginViewController.swift in Sources */,
 				9406F95F286E371900976A7B /* AppDelegate.swift in Sources */,
 				9406F961286E371900976A7B /* SceneDelegate.swift in Sources */,
+				94B660242874C8A500218E95 /* Person.swift in Sources */,
 				9406F9732871B4CE00976A7B /* WelcomeViewController.swift in Sources */,
 				94B6602228749BF300218E95 /* InformationViewController.swift in Sources */,
 			);
