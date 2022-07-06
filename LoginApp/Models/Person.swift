@@ -13,8 +13,20 @@ struct Person {
     static func getPerson() -> Person {
         Person(
             name: "Renat Ibragimov",
-            infoAboutPerson: "String",
-            image: "selfPhoto"
+            infoAboutPerson:
+            """
+            Имя: Ренат
+            Фамилия: Ибрагимов
+            Возраст: 30 лет
+            
+            Текущее место работы: АО "Агентство ВТН"
+            Должность: Импорт/экспорт специалист
+            
+            Предыдущие места работы:
+            - ЗАО "Контроль качества"
+            - АО "KNAUF Rus"
+            """,
+            image: ""
         )
     }
 }

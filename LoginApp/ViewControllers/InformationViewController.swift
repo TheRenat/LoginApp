@@ -10,8 +10,8 @@ import UIKit
 class InformationViewController: UIViewController {
     
     @IBOutlet var personImage: UIImageView!
-    
     @IBOutlet var personInfo: UILabel!
+    @IBOutlet var name: UILabel!
     
     var personName = ""
     var personInformation = ""
@@ -20,8 +20,9 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = personName
+        name.text = personName
         personInfo.text = personInformation
+        
         personImage.image = UIImage(named: "selfPhoto")
     }
     override func viewDidLayoutSubviews() {
