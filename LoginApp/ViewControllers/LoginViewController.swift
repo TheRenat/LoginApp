@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
                 informationVC.personName = user.person.name
                 informationVC.personInformation = user.person.infoAboutPerson
                 informationVC.personPhoto = user.person.image
+            } else if let aboutPersonVC = viewController as? AboutPersonViewController {
+                aboutPersonVC.lifeStory = user.person.storyOfLife
             }
         }
     }
