@@ -265,7 +265,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UGd-48-AQ3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.74304077260000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qa7-Bt-TRO" firstAttribute="top" secondItem="UGd-48-AQ3" secondAttribute="top" constant="20" id="7eh-vO-60d"/>
                             <constraint firstItem="qa7-Bt-TRO" firstAttribute="centerX" secondItem="UGd-48-AQ3" secondAttribute="centerX" id="GYf-de-UcR"/>
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BI-mP-jzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2297" y="-317"/>
+            <point key="canvasLocation" x="1538" y="-1018"/>
         </scene>
     </scenes>
     <resources>
