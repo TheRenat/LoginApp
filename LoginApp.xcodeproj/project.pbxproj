@@ -16,7 +16,6 @@
 		9406F9732871B4CE00976A7B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406F9722871B4CE00976A7B /* WelcomeViewController.swift */; };
 		94B66020287490A400218E95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6601F287490A400218E95 /* User.swift */; };
 		94B6602228749BF300218E95 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6602128749BF300218E95 /* InformationViewController.swift */; };
-		94B660242874C8A500218E95 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B660232874C8A500218E95 /* Person.swift */; };
 		94B660282875FF1900218E95 /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B660272875FF1900218E95 /* AboutPersonViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		9406F9722871B4CE00976A7B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		94B6601F287490A400218E95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94B6602128749BF300218E95 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		94B660232874C8A500218E95 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		94B660272875FF1900218E95 /* AboutPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				94B6601F287490A400218E95 /* User.swift */,
-				94B660232874C8A500218E95 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +195,6 @@
 				9406F95F286E371900976A7B /* AppDelegate.swift in Sources */,
 				94B660282875FF1900218E95 /* AboutPersonViewController.swift in Sources */,
 				9406F961286E371900976A7B /* SceneDelegate.swift in Sources */,
-				94B660242874C8A500218E95 /* Person.swift in Sources */,
 				9406F9732871B4CE00976A7B /* WelcomeViewController.swift in Sources */,
 				94B6602228749BF300218E95 /* InformationViewController.swift in Sources */,
 			);
