@@ -9,12 +9,15 @@ import UIKit
 
 class AboutPersonViewController: UIViewController {
     
-    var lifeStory = ""
+    var person: User!
     
     @IBOutlet var storyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyLabel.text = lifeStory
+        view.addBackgroundColor()
+        
+        storyLabel.textColor = .black
+        storyLabel.text = person.person.storyOfLife
     }
 }

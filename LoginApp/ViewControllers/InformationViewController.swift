@@ -13,16 +13,15 @@ class InformationViewController: UIViewController {
     @IBOutlet var personInfo: UILabel!
     @IBOutlet var name: UILabel!
     
-    var personName = ""
-    var personInformation = ""
-    var personPhoto = ""
+    var person: User!
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addBackgroundColor()
         
-        name.text = personName
-        personInfo.text = personInformation
-        
+        name.text = person.person.name
+        personInfo.textColor = .black
+        personInfo.text = person.person.infoAboutPerson
         personImage.image = UIImage(named: "selfPhoto")
     }
     override func viewDidLayoutSubviews() {
